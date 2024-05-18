@@ -8,17 +8,19 @@
 </head>
 <body>
 
-    <div class="accessibility-system">
-        <button onclick="openAccessibilityMenu()">Accessibility Menu</button>
-        <div id="accessibilityMenu" style="display:none;">
-            <button onclick="adjustForScreenReader()">Accessibility for blind people who use screen readers</button>
-            <button onclick="enableKeyboardNavigation()">Keyboard Navigation</button>
+    <div class="top-bar">
+        <div class="top-bar-icons">
+            <img src="images/menu.png" alt="Menu" class="icon">
+            <img src="images/chat.png" alt="CS Chat" class="icon">
+            <img src="images/carts.png" alt="Cart" class="icon">
+            <img src="images/account.png" alt="Account" class="icon">
         </div>
     </div>
-
+    
     <div class="header">
-        <img src="koreatown-pets-header.jpg" alt="Koreatown Pets Header Image" style="width:100%;height:auto;">
+        <img src="images/dogs and cats.jpeg" alt="Koreatown Pets Header Image">
     </div>
+    
 
     <div class="menu-bar">
         <a href="#home">Home</a>
@@ -32,70 +34,44 @@
     <div id="home" class="container">
         <h1>Welcome to Koreatown Pet Adoption Service</h1>
         <p>We are dedicated to helping you find your new best friend. Our service connects you with nearby shelters and adoption centers in Koreatown, California. Explore our listings to find the perfect pet for your family.</p>
-        <img src="pets.jpg" alt="Pets Image" style="width:100%;height:auto;">
+        <img src="images/pet_adoption.jpeg" alt="Pets Image" style="width:100%;height:auto;">
     </div>
 
     <div id="dogs-adoption" class="container">
         <h2>Dogs for Adoption in Koreatown, California</h2>
-        <p>Find your new furry friend from our list of adorable dogs and puppies available for adoption. All our dogs are looking for loving homes. Browse through our listings and find your perfect match.</p>
-        <div class="dog-listing">
-            <h3>TERRA</h3>
-            <p>Baby - Labrador Retriever</p>
-            <img src="terra.jpg" alt="Terra">
+        <div class="animal-list">
+            <div class="animal-item">
+                <h3>TERRA</h3>
+                <img src="images/terra.jpg" alt="Terra">
+            </div>
+            <div class="animal-item">
+                <h3>ROBIN</h3>
+                <img src="images/robin.jpg" alt="Robin">
+            </div>
         </div>
-        <div class="dog-listing">
-            <h3>ROBIN</h3>
-            <p>Baby - Labrador Retriever</p>
-            <img src="robin.jpg" alt="Robin">
-        </div>
-        <!-- Add more dog listings as needed -->
-        <a href="#more-dogs">View More</a>
+        <a href="#more-dogs" class="view-more">View More</a>
     </div>
 
     <div id="cats-adoption" class="container">
         <h2>Cats for Adoption in Koreatown, California</h2>
-        <p>Explore our list of cats and kittens available for adoption. These lovely felines are ready to find their forever homes.</p>
-        <!-- Add cat listings similarly to dog listings -->
-        <a href="#more-cats">View More</a>
-    </div>
-
-    <div id="shop" class="container">
-        <h2>Shop</h2>
-        <p>Find the best products for your new pet. From pet ramps to cozy blankets, we have everything you need to welcome your new family member.</p>
-        <div class="shop-item">
-            <h3>Best Dog Ramp - PawRamp</h3>
-            <img src="pawramp.jpg" alt="PawRamp">
-            <a href="#pawramp-details">View Details</a>
+        <div class="animal-list">
+            <div class="animal-item">
+                <h3>LUNA</h3>
+                <img src="images/luna.jpg" alt="Luna">
+            </div>
+            <div class="animal-item">
+                <h3>BELLA</h3>
+                <img src="images/bella.jpg" alt="Bella">
+            </div>
         </div>
-        <div class="shop-item">
-            <h3>Pee Pads for Dogs - Magic Pee Pads</h3>
-            <img src="peepads.jpg" alt="Magic Pee Pads">
-            <a href="#peepads-details">View Details</a>
-        </div>
-        <!-- Add more shop items as needed -->
-    </div>
-
-    <div id="learn" class="container">
-        <h2>Learn</h2>
-        <p>Get tips and advice on pet care from our experts. Learn about different breeds, training techniques, and how to keep your pet healthy and happy.</p>
-        <div class="learn-article">
-            <h3>Top 10 Best Dog Breeds To Own If You Live In The City</h3>
-            <p>Discover the best dog breeds for city living and find out which one suits your lifestyle.</p>
-            <a href="#read-more">Read More</a>
-        </div>
-        <div class="learn-article">
-            <h3>Top 10 Ways To Travel With Your Dogs In Comfort</h3>
-            <p>Learn how to make traveling with your dog a comfortable and enjoyable experience for both of you.</p>
-            <a href="#read-more">Read More</a>
-        </div>
-        <!-- Add more learn articles as needed -->
+        <a href="#more-cats" class="view-more">View More</a>
     </div>
 
     <footer>
         <div class="newsletter-box">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                         <h5>Join our pack & get exclusive VIP offers ❤️</h5>
                         <div class="newsletter">
                             <form action="#">
@@ -107,104 +83,23 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="row foot-link">
-                        <div class="col-md-3 col-6">
-                            <h5>Shop</h5>
-                            <ul class="menu">
-                                <li><a href="#dog-ramp">Dog Ramp</a></li>
-                                <li><a href="#pawproof-blanket">PawProof Throw Blanket</a></li>
-                                <li><a href="#cat-litter">Health Monitoring Cat Litter</a></li>
-                                <li><a href="#best-sellers">Best Sellers</a></li>
-                                <li><a href="#gifts">Best Gifts for Pet Parents</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h5>Company</h5>
-                            <ul class="menu">
-                                <li><a href="#about-us">About Us</a></li>
-                                <li><a href="#our-experts">Meet Our Experts</a></li>
-                                <li><a href="#ambassadors">Brand Ambassadors</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h5>Resources</h5>
-                            <ul class="menu">
-                                <li><a href="#training-guide">Ramp Training Guide</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#vet-corner">Vet Corner</a></li>
-                                <li><a href="#dog-breeds">Dog Breed Guides</a></li>
-                                <li><a href="#dogs-adoption">Dogs for Adoption</a></li>
-                                <li><a href="#cats-adoption">Cats for Adoption</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <h5>Support</h5>
-                            <ul class="menu">
-                                <li><a href="#contact-us">Contact Us</a></li>
-                                <li><a href="#help-faqs">Help & FAQs</a></li>
-                                <li><a href="#my-account">My Account</a></li>
-                                <li><a href="#klarna">What is Klarna?</a></li>
-                                <li><a href="#accessibility-notice">Website Accessibility Notice</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h5>CONTACT US</h5>
-                    <div class="social">
-                        <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-                        <a href="https://www.twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
-                        <a href="https://www.youtube.com" target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-                    </div>
-                    <div class="contact-info">
-                        <img src="email-icon.png" alt="Email"> 
-                        <a href="mailto:support@koreatownpets.com">support@koreatownpets.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="foot-bt">
+        <div class="footer-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="copy">© 2024 Koreatown Pet Adoption Service. All rights reserved.</div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="terms"> 
-                            <a href="#terms-conditions">Terms & Conditions</a>
-                            <a href="#privacy-policy">Privacy Policy</a>
+                    <div class="col-md-12 text-center">
+                        <div id="nondisclaimer">
+                            <div class="copy">
+                                &copy; Copyright 2024: @sangiljung
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="payment-options.png" alt="Payment Options" class="img-fluid">
+                        <div id="disclaimer">
+                            <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        function openAccessibilityMenu() {
-            var menu = document.getElementById('accessibilityMenu');
-            if (menu.style.display === 'none') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
-        }
-
-        function adjustForScreenReader() {
-            alert('Accessibility for screen readers enabled.');
-        }
-
-        function enableKeyboardNavigation() {
-            alert('Keyboard navigation enabled.');
-        }
-    </script>
 
 </body>
 </html>
