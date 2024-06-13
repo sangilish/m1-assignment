@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koreatown Community Board</title>
     <link rel="stylesheet" href="style_1.css">
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <!--Container-->
@@ -62,17 +63,37 @@
 
     <div id="contact" class="container contact-form">
         <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <form action="/signup" method="post">
+            <fieldset>
+                <legend>User Personal Information</legend>
+                <label>Enter your full name</label>
+                <input type="text" name="name">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                <label>Select your gender</label>
+                <input type="radio" name="gender" value="male"/>Male
+                <input type="radio" name="gender" value="female"/>Female
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <label>How should we contact you?</label>
+                <select id="contact-method">
+                    <option value="">Select One</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                </select>
 
-            <input type="submit" value="Submit">
+                <div id="email-input" class="hidden">
+                    <label>Enter your email</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div id="phone-input" class="hidden">
+                    <label>Enter your phone</label>
+                    <input type="text" name="phone">
+                </div>
+
+                <label>Tell us the reason for your visit today:</label>
+                <textarea rows="5" cols="30"></textarea>
+                <input type="submit" value="sign-up">
+            </fieldset>
         </form>
     </div>
 

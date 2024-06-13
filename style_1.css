@@ -87,3 +87,47 @@ ul {
 ul li {
     margin-bottom: 10px;
 }
+
+.hidden {
+    display: none;
+}
+
+.contact-form fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.contact-form legend {
+    font-weight: bold;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form select {
+    width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.contact-form input[type="radio"] {
+    margin-top: 10px;
+    width: auto;
+}
+
+.contact-form input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
+    background-color: #ea4022;
+    border: 0px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
