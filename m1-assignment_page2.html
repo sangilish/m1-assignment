@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koreatown Pet Adoption Service</title>
     <link rel="stylesheet" href="style_2.css">
-    <script src="gallery.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -40,11 +41,15 @@
         <div class="animal-list">
             <div class="animal-item">
                 <h3>TERRA</h3>
-                <img src="images/terra.jpg" alt="Terra">
+                <a href="#/" class="lightbox-toggle">
+                    <img src="images/terra.jpg" alt="Terra">
+                </a>
             </div>
             <div class="animal-item">
                 <h3>ROBIN</h3>
-                <img src="images/robin.jpg" alt="Robin">
+                <a href="#/" class="lightbox-toggle">
+                    <img src="images/robin.jpg" alt="Robin">
+                </a>
             </div>
         </div>
         <a href="#more-dogs" class="view-more">View More</a>
@@ -55,14 +60,23 @@
         <div class="animal-list">
             <div class="animal-item">
                 <h3>LUNA</h3>
-                <img src="images/luna.jpg" alt="Luna">
+                <a href="#/" class="lightbox-toggle">
+                    <img src="images/luna.jpg" alt="Luna">
+                </a>
             </div>
             <div class="animal-item">
                 <h3>BELLA</h3>
-                <img src="images/bella.jpg" alt="Bella">
+                <a href="#/" class="lightbox-toggle">
+                    <img src="images/bella.jpg" alt="Bella">
+                </a>
             </div>
         </div>
         <a href="#more-cats" class="view-more">View More</a>
+    </div>
+
+    <div class="backdrop"></div>
+    <div class="box">
+        <button class="close">Close</button>
     </div>
 
     <footer>
@@ -99,5 +113,37 @@
         </div>
     </footer>
 
+    <script>
+        $(document).ready(function(){
+
+            /* Open lightbox on image click */
+            $('.lightbox-toggle img').click(function(event){
+                event.preventDefault();
+                $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+                $('.box').fadeIn();
+
+                // Check if lightbox has an image
+                if ($('.box').contents('img')) {
+                    $('.box').contents().remove('img'); // If true, clear image
+                }
+
+                // Get the alt attribute value of the clicked image
+                var $altvalue = $(this).attr('alt');
+
+                // Append the image to the lightbox
+                var img = $(this).clone();
+                $('.box').append(img);
+            });
+
+            /* Close lightbox on click */
+            $('.close, .backdrop').click(function(){
+                $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+                    $('.backdrop').css('display', 'none');
+                });
+                $('.box').fadeOut();
+            });
+
+        });
+    </script>
 </body>
 </html>
